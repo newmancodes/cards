@@ -22,3 +22,6 @@ jobs:
             
             - name: Build Project
               run: mix compile
+
+            - name: Test Project
+              run: mix test
