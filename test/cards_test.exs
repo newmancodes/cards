@@ -20,4 +20,11 @@ defmodule CardsTest do
     deck = Cards.create_deck()
     assert !Cards.contains?(deck, "Joker")
   end
+
+  test "hand of 2 can be dealt" do
+    deck = Cards.create_deck()
+    { hand, remains_of_deck } = Cards.deal(deck, 2)
+    assert length(hand) == 2
+    assert length(remains_of_deck) == 50
+  end
 end
