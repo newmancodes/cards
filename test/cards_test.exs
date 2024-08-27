@@ -3,7 +3,7 @@ defmodule CardsTest do
   doctest Cards
 
   test "creates the deck" do
-    assert Cards.create_deck == ["Ace", "Two", "Three"]
+    assert length(Cards.create_deck) == 52
   end
 
   test "shuffles the deck" do
@@ -11,13 +11,13 @@ defmodule CardsTest do
     assert length(Cards.shuffle(deck)) == length(deck)
   end
 
-  test "deck contains Two" do
+  test "deck contains Two of Diamonds" do
     deck = Cards.create_deck()
-    assert Cards.contains?(deck, "Two")
+    assert Cards.contains?(deck, "Two of Diamonds")
   end
 
-  test "deck does not contain King" do
+  test "deck does not contain Joker" do
     deck = Cards.create_deck()
-    assert !Cards.contains?(deck, "King")
+    assert !Cards.contains?(deck, "Joker")
   end
 end
