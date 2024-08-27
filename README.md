@@ -1,5 +1,7 @@
 # Cards
 
+[![CI](https://github.com/newmancodes/cards/actions/workflows/main.yml/badge.svg)](https://github.com/newmancodes/cards/actions/workflows/main.yml)
+
 **TODO: Add description**
 
 ## Installation
