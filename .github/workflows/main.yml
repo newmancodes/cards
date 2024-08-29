@@ -30,9 +30,8 @@ jobs:
               run: mix docs
 
             - name: Upload Documentation Artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-pages-artifact@v3
               with:
-                name: documentation
                 path: ./doc
 
     deploy:
@@ -47,5 +46,3 @@ jobs:
         steps:
             - name: Deploy Documentation to GitHub Pages
               uses: actions/deploy-pages@v4
-              with:
-                artifact_name: documentation
