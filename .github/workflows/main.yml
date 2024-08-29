@@ -25,3 +25,6 @@ jobs:
 
             - name: Test Project
               run: mix test
+
+            - name: Generate Documentation
+              run: mix docs
