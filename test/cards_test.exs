@@ -27,4 +27,19 @@ defmodule CardsTest do
     assert length(hand) == 2
     assert length(remains_of_deck) == 50
   end
+
+  test "hand of 2 can be created" do
+    { hand, remains_of_deck } = Cards.create_hand(5)
+    assert length(hand) == 5
+    assert length(remains_of_deck) == 47
+  end
+
+  test "decks can be persisted" do
+    path = "some_filename.deck"
+    deck = Cards.create_deck()
+    Cards.save(deck, path)
+    loaded_deck = Cards.load(path)
+    assert length(deck) == length(loaded_deck)
+    File.rm(path)
+  end
 end
