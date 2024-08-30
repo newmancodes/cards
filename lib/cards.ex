@@ -24,6 +24,14 @@ defmodule Cards do
 
   @doc """
     Determines if a deck of cards, represented as a list of strings, and determines if a particular card is found within that deck
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Diamonds")
+      true
+      iex> Cards.contains?(deck, "Sploog of Cabbages")
+      false
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
