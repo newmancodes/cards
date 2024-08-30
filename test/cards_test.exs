@@ -18,7 +18,7 @@ defmodule CardsTest do
 
   test "deck does not contain Joker" do
     deck = Cards.create_deck()
-    assert !Cards.contains?(deck, "Joker")
+    refute Cards.contains?(deck, "Joker")
   end
 
   test "hand of 2 can be dealt" do
