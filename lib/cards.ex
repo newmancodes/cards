@@ -38,6 +38,8 @@ defmodule Cards do
       iex> { hand, deck } = Cards.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
+      iex> length(deck)
+      51
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
